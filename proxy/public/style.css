@@ -1,0 +1,29 @@
+
+.container {
+  border: solid 2px black;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 80%;
+}
+
+.itemContainer{
+  width: 320px;
+  height: 320px;
+}
+
+/* .itemDetail {
+  float: left;
+} */
+
+.itemDetail{
+  border: solid 2px blue;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+table {
+  border: solid 2px blue;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
