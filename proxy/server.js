@@ -27,11 +27,17 @@ app.use(
 app.use(
   '/test',
   proxy({
-    target: 'http://localhost:3001',
+    target: 'http://localhost:8080',
     changeOrigin: true
   })
 )
-
+app.use(
+  '/test1',
+  proxy({
+    target: 'http://localhost:6001',
+    changeOrigin: true
+  })
+)
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
 });

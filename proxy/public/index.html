@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-    <title>FEC Demo</title>
-  </head>
-  <body>
-    <div id="imageCarousel"></div>
-    <div id="decription"></div>
-    <div id="review"></div>
-    <!-- <div id="Reviews"></div> -->
-    <script src="/lib/react.development.js"></script>
-    <script src="/lib/react-dom.development.js"></script>
-    <script src="http://localhost:3000/bundle.js"></script>
-    <script src="http://localhost:3001/bundle.js"></script>
-    <!-- <script src="http://localhost:3003/app.js"></script> -->
-    <script src="http://localhost:9000/bundle.js"></script>
-    <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
-    <script>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/style.css">
+  <title>FEC Demo</title>
+</head>
+
+<body>
+
+  <table>
+    <tr>
+      <div id="imageCarousel"></div>
+    </tr>
+    <tr>
+      <div class="heather1" id="heather"></div>
+    </tr>
+    <tr>
+      <div id="reviews"></div>
+    </tr>
+  </table>
+
+  <script src="/lib/react.development.js"></script>
+  <script src="/lib/react-dom.development.js"></script>
+  <script src="http://localhost:1000/bundle.js"></script>
+  <script src="http://localhost:6001/bundle.js"></script>
+  <!-- <script src="http://localhost:8080/bundle.js"></script>
+  <script src="http://localhost:9000/bundle.js"></script> -->
+  <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+  <!-- <script>
       ReactDOM.render(
-        React.createElement(Carousel),
+        React.createElement(ImageCarousel),
         document.getElementById('imageCarousel')
-      );
-      ReactDOM.render(
-        React.createElement(Description),
-        document.getElementById('decription')
-      );
-      ReactDOM.render(
-        React.createElement(Reviews),
-        document.getElementById('review')
-      );
-      // ReactDOM.render(
-      //   React.createElement(Reviews),
-      //   document.getElementById('Reviews')
+      ); -->
+  <!-- // ReactDOM.render(
+      //   React.createElement(Description),
+      //   document.getElementById('itemDetail')
       // );
-    </script>
-  </body>
+      // ReactDOM.render(
+      //   React.createElement(KeyIngredients),
+      //   document.getElementById('keyIngredients')
+      // );
+      // ReactDOM.render(
+      //   React.createElement(ComponentReviews),
+      //   document.getElementById('review')
+      // ); -->
+
+  </script>
+</body>
+
 </html>
