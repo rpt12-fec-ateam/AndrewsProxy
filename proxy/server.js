@@ -13,7 +13,7 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(
-  '/allReviews',
+  '/allReviews/item/:id',
   proxy({
     target: process.env.AARUSHI || 'http://localhost:9000',
     changeOrigin: true
@@ -21,7 +21,7 @@ app.use(
 );
 
 app.use(
-  '/allItems',
+  '/allItems/item/:id',
   proxy({
     target: process.env.AARUSHI || 'http://localhost:9000',
     changeOrigin: true
