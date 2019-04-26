@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(
   '/allReviews',
   proxy({
-    target: 'http://localhost:9000',
+    target: process.env.AARUSHI || 'http://localhost:9000',
     changeOrigin: true
   })
 );
@@ -23,7 +23,7 @@ app.use(
 app.use(
   '/allItems',
   proxy({
-    target: 'http://localhost:9000',
+    target: process.env.AARUSHI || 'http://localhost:9000',
     changeOrigin: true
   })
 );
@@ -31,14 +31,14 @@ app.use(
 app.use(
   '/test',
   proxy({
-    target: 'http://localhost:8080',
+    target: process.env.ANAIT || 'http://localhost:8080',
     changeOrigin: true
   })
 )
 app.use(
   '/ingredients',
   proxy({
-    target: 'http://localhost:6001',
+    target: process.env.HEATHER || 'http://localhost:6001',
     changeOrigin: true
   })
 )
