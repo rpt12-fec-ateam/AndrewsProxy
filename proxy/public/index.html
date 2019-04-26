@@ -11,7 +11,7 @@
 
   <table>
     <tr>
-      <div id="imageCarousel"></div>
+      <div id="root"></div>
     </tr>
     <tr>
       <div class="heather1" id="heather"></div>
@@ -21,11 +21,43 @@
     </tr>
   </table>
 
-  <script src="/lib/react.development.js"></script>
-  <script src="/lib/react-dom.development.js"></script>
-  <script src="http://localhost:1000/bundle.js"></script>
+  <!-- <script src="/lib/react.development.js"></script>
+  <script src="/lib/react-dom.development.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      fetch(`/script`)
+        .then(data => data.json())
+        .then((data) => {
+          console.log(data);
+          var script1 = document.createElement("script");
+          var script2 = document.createElement("script");
+          var script3 = document.createElement("script");
+          var script4 = document.createElement("script");
+
+          script1.src = data.andrew;
+          script2.src = data.heather;
+          script3.src = data.anait;
+          script4.src = data.aarushi;
+
+          $("head").append(script1);
+          $("head").append(script2);
+          $("head").append(script3);
+          $("head").append(script4);
+
+        })
+
+    });
+
+  </script>
+
+  <!-- <script src="http://localhost:1000/bundle.js"></script>
   <script src="http://localhost:6001/bundle.js"></script>
-  <!-- <script src="http://localhost:8080/bundle.js"></script>
+  <script src="http://localhost:8080/bundle.js"></script>
   <script src="http://localhost:9000/bundle.js"></script> -->
   <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
   <!-- <script>
