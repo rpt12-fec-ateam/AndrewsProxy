@@ -32,7 +32,7 @@ app.use(
   })
 )
 app.use(
-  '/test1',
+  '/ingredients',
   proxy({
     target: 'http://localhost:6001',
     changeOrigin: true
